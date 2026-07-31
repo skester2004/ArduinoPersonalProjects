@@ -1,0 +1,20 @@
+int buttonPin = 2;     // The pin number where the button is connected
+int ledPin = 13;       // The pin number for the LED
+int buttonState = 0;   // Variable for reading the push-button status
+
+void setup() {
+  pinMode(ledPin, OUTPUT);      // Set the LED pin as an output
+  pinMode(buttonPin, INPUT);    // Set the button pin as an input
+}
+
+void loop() {
+  // Read the state of the briefcase button value (HIGH or LOW)
+  buttonState = digitalRead(buttonPin);
+
+  // Check if the button is pressed. If it is, the buttonState is HIGH
+  if (buttonState == HIGH) {
+    digitalWrite(ledPin, HIGH);  // Turn LED on
+  } else {
+    digitalWrite(ledPin, LOW);   // Turn LED off
+  }
+}
